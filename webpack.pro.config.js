@@ -4,7 +4,7 @@ let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const vendors = ['react', 'react-dom']
+const vendors = ['react', 'react-dom', 'antd', 'd3'];
 module.exports = {
     devServer: {
         hot: true,

@@ -1,5 +1,5 @@
-@color:#00ff00;
-.modal-mask{
+$color:#00ff00;
+.modal-mask {
     position: fixed;
     top: 0;
     right: 0;
@@ -12,7 +12,7 @@
 }
 
 // 确认框
-.confirm-body{
+.confirm-body {
     position: relative;
     top: 100px;
     margin: 0 auto;
@@ -26,23 +26,23 @@
     padding: 30px 40px;
     text-align: center;
     font-size: 12px;
-    .confirm-title{
+    .confirm-title {
         color: #666;
         font-weight: bold;
         font-size: 14px;
     }
-    .confirm-desc{
+    .confirm-desc {
         margin-top: 10px;
     }
-    .confirm-btns{
+    .confirm-btns {
         margin-top: 10px;
     }
 }
 
-
-.alert{
-    color: @color;
+.alert {
+    color: $color;
 }
-.isVisible{
+
+.isVisible {
     display: none;
 }

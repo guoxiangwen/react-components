@@ -1,13 +1,12 @@
 import ReactDOM from 'react-dom';
 import React, { Component, PropTypes } from 'react';
-import './alert.less';
 
-class Alert extends Component {
+import Button from '../button/button';
+import './confirm.scss';
+
+class Confirm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            visible: false
-        }
     }
     render() {
         const props = this.props;
@@ -18,22 +17,26 @@ class Alert extends Component {
                         <div className="confirm-title">{props.title}</div>
                         <div className="confirm-desc">{props.desc}</div>
                         <div className="confirm-btns">
-                            <button type="button" onClick={props.okClick}>确定</button>
-                            <button type="button" onClick={props.cancelClick}>取消</button>
+                            <Button text="确定"  onClick={props.okClick} />
+                            <Button text="取消" onClick={props.cancelClick} />
                         </div>
                     </div>
                 </div>
             </div>
-
-
         );
     }
 }
 
-// Alert.propTypes = {
-//     title: React.propTypes.string,
-//     desc: React.propTypes.string,
-// };
+Confirm.defaultProps = {
+    title: "default title"
+}
+
+Confirm.propTypes = {
+    title: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    okClick:PropTypes.func.isRequired,
+    cancelClick:PropTypes.func.isRequired
+};
 
 
-export default Alert;
+export default Confirm;
